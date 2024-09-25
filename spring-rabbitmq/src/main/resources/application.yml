@@ -1,0 +1,24 @@
+spring:
+  # Spring Boot RabbitMQ 설정
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: admin
+  listener:
+    simple: # exchange 옵션에 따라 다르다!
+      default-requeue-rejected: false
+  datasource:
+    url: jdbc:mysql://localhost:3306/study
+    username: jpa
+    password: 1234
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+
+logging:
+  level:
+    com.example.springrabbitmq.service: DEBUG
