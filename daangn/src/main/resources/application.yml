@@ -1,0 +1,19 @@
+spring:
+  profiles:
+    active: test
+  datasource:
+      url: "jdbc:mysql://localhost:3306/DAANGN_MARKET?characterEncoding=UTF-8&serverTimezone=UTC"
+      username: "mong"
+      password: 1234
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+#        show_sql: true
+        format_sql: true
+
+logging.level:
+  org.hibernate.SQL: debug
+#  org.hibernate.type: trace
